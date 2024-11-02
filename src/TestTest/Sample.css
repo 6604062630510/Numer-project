@@ -1,0 +1,50 @@
+/*.center-table {
+    margin: 0 auto;
+    width: 80%;
+    background-color: blueviolet !important;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    padding: 10px 15px 15px 15px;
+}
+
+
+.center-table tbody {
+    background-color: white !important; 
+    color: black !important;
+}*/
+
+.Answer{
+    font-size: 30px;
+    text-align: center;
+}
+
+.table-dark{
+    font-size: 20px;
+    text-align: center;
+}
+
+.table-bd{
+    font-size: 20px;
+    text-align: center;
+}
+
+.center-table{
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.form-mm {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center elements vertically */
+    height: 50vh; /* Full viewport height for vertical centering */
+}
+
+.form-mm .row {
+    justify-content: center; /* Center the row contents */
+    width: 100%; /* Ensure row takes full width */
+}
+

@@ -1,0 +1,79 @@
+.App {
+
+  background-color: #101820;
+  height: fit-content;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.josefin-sans {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; 
+  font-style: normal;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+li{
+  float: left;
+}
+
+
+
+.App-body {
+  background-color: #101820;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 25px;
+  font-family: "Josefin Sans", sans-serif;
+  padding-bottom: 1%;
+}
+
+
+.App-body .Error-display{
+
+  margin: 3%;
+  display: flex;
+  width: fit-content;
+
+  justify-content: center;
+ 
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.App-body label{
+  color: #ffffff;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,46 @@
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fee715;
+  }
+  li{
+    float: left;
+    font-size: 23px;
+  }
+  
+  .Navli{
+    display: block;
+    width: 100%;
+    background-color: #fee715;
+    margin-bottom: 3%;
+  }
+
+  
+  li a {
+    display: flex;
+    color: #101820;
+    font-size:30px;
+    font-weight: bold;
+    padding: 10px 50%;
+    text-decoration: none;
+
+
+
+
+  }
+
+  .Navbar {
+    width: 100%;
+    
+
+  }
+
+
+
+  
+
+  
+  
