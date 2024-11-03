@@ -10,6 +10,9 @@ const Secant =()=>{
     const [formula, setFormula] = useState("");
         
     useEffect(()=>{
+        if (window.MathJax) {
+            window.MathJax.typeset(); 
+        }
         const fetchFormula = async () => {
             const formulaGet = await CallFormula("Secant", 1); 
             setFormula(formulaGet);
@@ -18,7 +21,7 @@ const Secant =()=>{
         fetchFormula();
 
 
-    }, []);
+    }, [formula]);
 
     const print =()=>{
         console.log(data)

@@ -10,6 +10,9 @@ const Onepoint =()=>{
     const [formula, setFormula] = useState("");
 
     useEffect(()=>{
+        if (window.MathJax) {
+            window.MathJax.typeset(); 
+        }
         const fetchFormula = async () => {
             const formulaGet = await CallFormula("OnePoint", 1);
             setFormula(formulaGet);
@@ -18,7 +21,7 @@ const Onepoint =()=>{
         fetchFormula();
 
 
-    }, []);
+    }, [formula]);
 
 
     const print =()=>{

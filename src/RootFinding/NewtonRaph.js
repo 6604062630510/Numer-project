@@ -11,6 +11,9 @@ const NewtonRaph =()=>{
     const [formula, setFormula] = useState("");
         
         useEffect(()=>{
+            if (window.MathJax) {
+                window.MathJax.typeset(); 
+            }
             const fetchFormula = async () => {
                 const formulaGet = await CallFormula("NewtonRaphson", 1); 
                 setFormula(formulaGet);
@@ -19,7 +22,7 @@ const NewtonRaph =()=>{
             fetchFormula();
     
     
-        }, []);
+        }, [formula]);
 
 
     const print =()=>{
