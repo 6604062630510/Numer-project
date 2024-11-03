@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export function CallFormula(name, id_fomula) {
-    return axios.get('http://localhost:5000/api/data/search', { 
+    return axios.get('https://4fed-101-51-125-186.ngrok-free.app/api/data/search', { 
         params: {
             name: name,
             id_fomula: id_fomula
