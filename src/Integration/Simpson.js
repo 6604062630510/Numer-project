@@ -21,6 +21,9 @@ const Simpson = () =>{
     const [inputError, setInputError] = useState(""); 
     const [formula, setFormula] = useState("");
     useEffect(()=>{
+        if (window.MathJax) {
+            window.MathJax.typeset(); 
+        }
         const fetchFormula = async () => {
             const formulaGet = await CallFormula("Simpson", 1); 
             setFormula(formulaGet);
@@ -29,7 +32,7 @@ const Simpson = () =>{
         fetchFormula();
 
 
-    }, []);
+    }, [formula]);
 
 
 

@@ -16,6 +16,9 @@ const NewtonIt = () => {
     const [formula, setFormula] = useState("");
 
     useEffect(()=>{
+        if (window.MathJax) {
+            window.MathJax.typeset(); 
+        }
         const fetchFormula = async () => {
             const formulaGet = await CallFormula("NewtonIter", 1); 
             setFormula(formulaGet);
@@ -24,7 +27,7 @@ const NewtonIt = () => {
         fetchFormula();
 
 
-    }, []);
+    }, [formula]);
 
     const handleCalculate = () => {
 

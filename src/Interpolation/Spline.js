@@ -16,6 +16,9 @@ const Spline =()=> {
     const [formula, setFormula] = useState("");
 
     useEffect(()=>{
+        if (window.MathJax) {
+            window.MathJax.typeset(); 
+        }
         const fetchFormula = async () => {
             const formulaGet = await CallFormula("Spline", 1); 
             setFormula(formulaGet);
@@ -24,7 +27,7 @@ const Spline =()=> {
         fetchFormula();
 
 
-    }, []);
+    }, [formula]);
 
 
     const CalM = (x, y, n, m)=> {

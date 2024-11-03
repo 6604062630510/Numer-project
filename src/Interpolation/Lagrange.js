@@ -17,6 +17,9 @@ const Lagrange = () =>{
     const [formula, setFormula] = useState("");
 
     useEffect(()=>{
+        if (window.MathJax) {
+            window.MathJax.typeset(); 
+        }
         const fetchFormula = async () => {
             const formulaGet = await CallFormula("Lagrange", 1);
             setFormula(formulaGet);
@@ -25,7 +28,7 @@ const Lagrange = () =>{
         fetchFormula();
 
 
-    }, []);
+    }, [formula]);
 
     const handleCalculate =()=>{
         setError("");

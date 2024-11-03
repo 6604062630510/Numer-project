@@ -21,6 +21,9 @@ const Trapezoidal = () =>{
     const [inputError, setInputError] = useState(""); 
 
     useEffect(()=>{
+        if (window.MathJax) {
+            window.MathJax.typeset(); 
+        }
         const fetchFormula = async () => {
             const formulaGet = await CallFormula("Trapezoidal", 1); 
             setFormula(formulaGet);
@@ -29,7 +32,7 @@ const Trapezoidal = () =>{
         fetchFormula();
 
 
-    }, []);
+    }, [formula]);
 
 
 

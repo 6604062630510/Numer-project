@@ -11,6 +11,9 @@ const Cramer = () => {
 
     const [formula, setFormula] = useState("");
     useEffect(()=>{
+        if (window.MathJax) {
+            window.MathJax.typeset(); 
+        }
         let formulaGet = new Array(4);
         const fetchFormula = async () => {
             for (let i = 0; i < 4; i++) {
@@ -24,7 +27,7 @@ const Cramer = () => {
         fetchFormula();
 
 
-    }, []);
+    }, [formula]);
 
     const size = 4; 
     const [matrix, setMatrix] = useState([

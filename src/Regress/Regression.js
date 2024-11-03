@@ -14,6 +14,9 @@ const Regression =()=>{
     const [formula, setFormula] = useState("");
 
     useEffect(()=>{
+        if (window.MathJax) {
+            window.MathJax.typeset(); 
+        }
         const fetchFormula = async () => {
             const formulaGet = await CallFormula("Regression", 1); 
             setFormula(formulaGet);
@@ -22,7 +25,7 @@ const Regression =()=>{
         fetchFormula();
 
 
-    }, []);
+    }, [formula]);
         
 
  
@@ -40,7 +43,7 @@ const Regression =()=>{
     
 
 const handleCalculate = () => {
-
+    
         setError("");
 
         if (xValues.length !==  yValues.length) {
