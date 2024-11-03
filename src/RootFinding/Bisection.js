@@ -13,6 +13,10 @@ const Bisection =()=>{
     const [formula, setFormula] = useState("");
         
         useEffect(()=>{
+
+            if (window.MathJax) {
+                window.MathJax.typeset(); 
+            }
             const fetchFormula = async () => {
                 const formulaGet = await CallFormula("Bisection", 1); 
                 setFormula(formulaGet);
@@ -21,7 +25,7 @@ const Bisection =()=>{
             fetchFormula();
     
     
-        }, []);
+        }, [formula]);
 
     const print = () =>{
         
